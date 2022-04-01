@@ -1,0 +1,79 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: url(./img/jon-moore-6LkJpiEPl58-unsplash.jpg) no-repeat center center fixed;
+    background-size: cover; 
+}
+.nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: darkcyan;
+    color: #fff;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+
+   
+}
+.nav h1{
+    font-style: italic;
+    
+   
+}
+.nav div{
+   width: 60vw;
+   display: flex;
+   justify-content: space-around;
+   
+}
+.nav a{
+    font-weight: bold;
+    text-decoration: none;
+    
+    color: #fff;
+    
+}
+.nav a:hover{
+    color: yellow;
+}
+
+.space{
+    width: 100%;
+    height:650px;
+   
+}
+.text{
+    color: #fff;
+    
+    font-size: large;
+    font-style: oblique;
+    height: 400px;
+}
+.text p{
+    padding: 10px;
+} 
+.btn h1{
+    color: white;
+}
+#iletisim{
+    display: flex;
+    flex-direction: column;
+}
+#iletisim strong{
+    padding: 10px;
+}
+.buton{
+    background-color: black;
+    color: #fff;
+    height: 20px;
+    width: 200px;
+    margin-left: 50px;
+}
+.buton a{
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+}
