@@ -1,0 +1,11 @@
+$(".footer-1").click(function(e){
+    $().show();
+})
+ $(".close-popup").click(function(){
+      $(".main-popup").hide();
+     // $(".container").css("display","block");
+ })
+ $(".main-popup").click(function(){
+    $("#footer-1").hide();
+   // $(".container").css("display","block");
+})
