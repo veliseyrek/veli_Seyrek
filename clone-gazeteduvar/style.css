@@ -296,3 +296,27 @@ footer .logo-gazete{
     text-decoration: none;
     color: white;  margin-right: 10px;
 }
+.dots{
+    width: 60%;
+}
+.dots-1{
+    display: flex;
+   
+  
+}
+.dot{
+    margin-top: 7px;
+    margin-right: 3px;
+    width: 15px;
+    height: 15px;
+    background-color: #F06730;
+    border-radius: 50%;
+    
+}
+.kartlar img{
+    height: 200px;
+   
+}
+#ikinci{
+    display: none;
+}
