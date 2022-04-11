@@ -202,10 +202,12 @@ nav{
 
 footer{
     
+    position: relative;
     background-color: black;
     width: 100%;
     height: 292px;
     margin-top: 20px;
+    margin-top: max;
 }
 
 footer .logo-gazete{
