@@ -44,19 +44,34 @@ function sonrakiSlayt() {
   })
   $(document).ready(function(){
     $("#prev").click(function(){
+<<<<<<< HEAD
       $("#birinci").hide("slow");
       $("#ikinci").fadeIn("slow");
       $("#ikinci").css("display","flex");
+=======
+      $("#birinci").hide(1000);
+      $("#ikinci").fadeIn(1000);  
+      $("#ikinci").css("display","flex");  
+
+      
+>>>>>>> 89c2ffdf8597fc4d5a4257e6afa6c9dd27db187b
     })
 
   })
 
   $(document).ready(function(){
     $("#next").click(function(){
+<<<<<<< HEAD
       $("#birinci").hide("slow");
       $("#ikinci").fadeIn("slow");
       $("#ikinci").css("display","flex");
 
+=======
+      $("#birinci").hide(1000);
+      $("#ikinci").fadeIn(1000);     
+      $("#ikinci").css("display","flex");  
+      
+>>>>>>> 89c2ffdf8597fc4d5a4257e6afa6c9dd27db187b
     })
 
   })
