@@ -44,22 +44,19 @@ function sonrakiSlayt() {
   })
   $(document).ready(function(){
     $("#prev").click(function(){
-      $("#1").hide(1000);
-      $("#2").hide(1000);
-      $("#3").show(1000);
-      $("#4").show(1000);
-      
+      $("#birinci").hide("slow");
+      $("#ikinci").fadeIn("slow");
+      $("#ikinci").css("display","flex");
     })
 
   })
 
   $(document).ready(function(){
     $("#next").click(function(){
-      $("#1").hide(1000);
-      $("#2").hide(1000);
-      $("#3").show();
-      $("#4").show();
-      
+      $("#birinci").hide("slow");
+      $("#ikinci").fadeIn("slow");
+      $("#ikinci").css("display","flex");
+
     })
 
   })
