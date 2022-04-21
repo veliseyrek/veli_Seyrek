@@ -320,3 +320,6 @@ footer .logo-gazete{
 #ikinci{
     display: none;
 }
+.top-ball img{
+    border-radius: 50%;
+}
