@@ -1,0 +1,31 @@
+@model Author
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1 class="display-3">New Added Author</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Create">
+            <div class="form-group">
+                <label class="control-label">Author Name</label>
+                <input type="text" asp-for="AuthorName" class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">Author Surname</label>
+                <input type="text" asp-for="AuthorSurname" class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">AuthorDateOfBirth</label>
+                <input type="text" asp-for="AuthorDateOfBirth" class="form-control">
+            </div>
+            <div>
+                <input type="submit" class="btn btn-info" value="Save">
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-action="Index">Kategori Sayfasına Geri Dön</a>
+</div>

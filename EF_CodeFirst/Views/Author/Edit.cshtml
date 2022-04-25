@@ -1,0 +1,33 @@
+@model Author
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1 class="text-danger">@Model.AuthorName Düzenleme Sayfası</h1>
+<hr>
+<form asp-action="Edit">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="mb-3 form-group bg-info">
+                <label class="Control-label">Author Id:</label>
+                <label class="control-label" asp-for="AuthorId">@Model.AuthorId</label>
+                <input type="hidden" asp-for="AuthorId">
+            </div>
+            <div class="mb-3 form-group">
+                <label class="Control-label">Category Name:</label>
+                <input type="text" asp-for="AuthorName">
+            </div>
+            <div class="mb-3 form-group">
+                <label class="Control-label">Author Surname:</label>
+                <input type="text" asp-for="AuthorSurname">
+            </div>
+            <div class="mb-3 form-group">
+                <label class="Control-label">AuthorDateOfBirth:</label>
+                <input type="text" asp-for="AuthorDateOfBirth">
+            </div>
+            <div>
+                <input type="submit" value="Save Changes" class="btn btn-info">
+            </div>
+        </div>
+    </div>
+</form>

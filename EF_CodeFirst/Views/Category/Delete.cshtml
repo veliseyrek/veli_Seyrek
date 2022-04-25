@@ -1,0 +1,19 @@
+@model Category
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1 class="display-3">Kategori Sil</h1>
+<div>
+    <h4>Kategori Id</h4>
+    <p>@Model.CategoryId</p>
+    <h5>Kategori Adı</h5>
+    <p>@Model.CategoryName</p>
+    <h5>Kategori İçeriği</h5>
+    <p>@Model.CategoryDescription</p>
+</div>
+<form asp-action="Delete">
+    <input type="hidden" asp-for="CategoryId">
+    <input type="submit" value="Kategori türünü Sil" class="btn btn-sm btn-danger">
+</form>
+<a asp-action="Index">Kategori Türlerine dön</a>

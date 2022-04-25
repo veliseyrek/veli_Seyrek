@@ -1,0 +1,28 @@
+@model Author
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 class="display-3">Author Details</h1>
+
+<div class="card w-50 bg-info text-white">
+    <h4>Author ID</h4>
+    <p>@Model.AuthorId</p>
+
+    <hr>
+
+    <h4>Author Name</h4>
+    <p>@Model.AuthorName</p>
+
+    <hr>
+
+    <h4>Author Surname</h4>
+    <p>@Model.AuthorSurname</p>
+
+    <hr>
+
+    <h4>Author Birthday</h4>
+    <p>@Model.AuthorDateOfBirth</p>
+</div>
+
+<a asp-action="Index">Author sayfasına dön</a>

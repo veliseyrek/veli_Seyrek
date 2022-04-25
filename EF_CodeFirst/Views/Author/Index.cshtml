@@ -1,0 +1,41 @@
+@model List<EF_CodeFirst.Models.Author>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Author</h1>
+
+
+<a asp-action="Create">New Author</a>
+<table class="table table-striped table-dark">
+    <thead>
+        <tr>
+            <th>Author ID</th>
+            <th>Author Name</th>
+            <th>Author Surname</th>
+            <th>Yazar Tarih</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+
+        {
+            <tr>
+                <td>@item.AuthorId</td>
+                <td>@item.AuthorName</td>
+                <td>@item.AuthorSurname</td>
+                <td>@item.AuthorDateOfBirth</td>
+                <td>
+                <td>
+                    <a class="btn btn-sm btn-info" asp-action="Details" asp-route-id="@item.AuthorId">Detaylar</a>
+                    <a class="btn btn-sm btn-warning " asp-action="Edit" asp-route-id="@item.AuthorId">Düzenle</a>
+                    <a class="btn btn-sm btn-danger " asp-action="Delete" asp-route-id="@item.AuthorId"
+                    asp-for="IsDeleted">Sil</a>
+                </td>
+                </td>
+            </tr>
+
+        }
+    </tbody>
+</table>
+
