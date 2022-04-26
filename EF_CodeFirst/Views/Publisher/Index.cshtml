@@ -1,0 +1,39 @@
+@model List<Publisher>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="display-3">Publisher</h1>
+
+<a asp-action="Create">New Publisher</a>
+<table class="table table-striped table-dark">
+    <thead>
+        <tr>
+            <th>Publisher</th>
+            <th>Publisher Name</th>
+            <th>Publisher City</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+
+        {
+            <tr>
+                <td>@item.PublisherId</td>
+                <td>@item.PublisherName</td>
+                <td>@item.PublisherCity</td>
+                
+                <td>
+                <td>
+                    <a class="btn btn-sm btn-info" asp-action="Details" asp-route-id="@item.PublisherId">Detaylar</a>
+                    <a class="btn btn-sm btn-warning " asp-action="Edit" asp-route-id="@item.PublisherId">Düzenle</a>
+                    <a class="btn btn-sm btn-danger " asp-action="Delete" asp-route-id="@item.PublisherId"
+                    asp-for="IsDeleted">Sil</a>
+                </td>
+                </td>
+            </tr>
+
+        }
+    </tbody>
+</table>

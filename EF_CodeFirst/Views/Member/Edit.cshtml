@@ -1,0 +1,30 @@
+@model Member
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+<h1>@Model.MemberName Düzenleme Sayfası</h1>
+<hr>
+<form asp-action="Edit">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="mb-3 form-group">
+                <label class="Control-label">Member Id:</label>
+                <label class="control-label" asp-for="MemberId">@Model.MemberId</label>
+                <input type="hidden" asp-for="MemberId">
+            </div>
+            <div class="mb-3 form-group">
+                <label class="Control-label">Member Name</label>
+                <input type="text" asp-for="MemberName">
+            </div>
+            <div class="mb-3 form-group">
+                <label class="Control-label">Member Surname</label>
+                <input type="text" asp-for="MemberSurname">
+            </div>
+            <div>
+                <input type="submit" value="Save Changes" class="btn btn-info">
+            </div>
+        </div>
+    </div>
+</form>

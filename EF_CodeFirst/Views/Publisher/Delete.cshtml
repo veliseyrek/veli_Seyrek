@@ -1,0 +1,19 @@
+@model Publisher
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1 class="display-3">Publisher Delete</h1>
+<div>
+    <h4>Publisher Id</h4>
+    <p>@Model.PublisherId</p>
+    <h5>Publisher Name</h5>
+    <p>@Model.PublisherName</p>
+    <h5>Publisher City</h5>
+    <p>@Model.PublisherCity</p>
+</div>
+<form asp-action="Delete">
+    <input type="hidden" asp-for="PublisherId">
+    <input type="submit" value="Kategori türünü Sil" class="btn btn-sm btn-danger">
+</form>
+<a asp-action="Index">Kategori Türlerine dön</a>

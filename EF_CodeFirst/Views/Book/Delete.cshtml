@@ -1,0 +1,31 @@
+@model Book
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h3>Kitap Sil</h3>
+
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th>Kitap Adı:</th>
+            <th>Kitap Yılı:</th>
+        </tr>
+    </thead>
+    <tbody>
+            <tr>
+                <td>@Model.BookName</td>
+                <td>@Model.BookYearOfPublication</td>
+            </tr>
+    </tbody>
+
+</table>
+
+<form asp-action="Delete">
+<input type="hidden" asp-for="IsDeleted">
+<input type="submit" value="Kitab Sil" class="btn btn-danger">
+</form>
+
+<div>
+    <a asp-action="">Kitap Listesine Geri Dön</a>
+</div>

@@ -1,0 +1,47 @@
+@model List<Book>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Book</h1>
+
+
+<a asp-action="Create">New Book</a>
+<table class="table table-striped table-dark">
+    <thead>
+        <tr>
+            <th>Book ID</th>
+            <th>Book Name</th>
+            <th>Book Quantity</th>
+            <th>Book Number of Page</th>
+            <th>Category Id</th>
+            <th>Author Id</th>
+            <th>Publisher Id</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+
+        {
+            <tr>
+                <td>@item.BookId</td>
+                <td>@item.BookName</td>
+                <td>@item.BookQuantity</td>
+                <td>@item.BookNumberOfPages</td>
+                <td>@item.CategoryId</td>
+                <td>@item.AuthorId</td>
+                <td>@item.PublisherId</td>
+                <td>
+                <td>
+                    <a class="btn btn-sm btn-info" asp-action="Details" asp-route-id="@item.BookId">Detaylar</a>
+                    <a class="btn btn-sm btn-warning " asp-action="Edit" asp-route-id="@item.BookId">Düzenle</a>
+                    <a class="btn btn-sm btn-danger " asp-action="Delete" asp-route-id="@item.BookId"
+                    asp-for="IsDeleted">Sil</a>
+                </td>
+                </td>
+            </tr>
+
+        }
+    </tbody>
+</table>

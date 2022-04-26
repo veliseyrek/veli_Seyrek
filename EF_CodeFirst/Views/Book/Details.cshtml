@@ -1,0 +1,35 @@
+@model Book
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Kitap Detayları</h1>
+
+<div class="row">
+    <div class="col-md-4">
+    <h4>Kitap Id:</h4>
+    <p>@Model.BookId</p>
+    <h4>Kitap Ad:</h4>
+    <p>@Model.BookName</p>
+    <h4>Kitap Yılı:</h4>
+    <p>@Model.BookYearOfPublication</p>
+    <h4>Kitap Baskı Numarası:</h4>
+    <p>@Model.BookEditionNumber</p>
+    <h4>Kitap Sayfa Sayısı:</h4>
+    <p>@Model.BookNumberOfPages</p>
+    <h4>Kitap Miktarı:</h4>
+    <p>@Model.BookQuantity</p>
+    <h4>Silindi</h4>
+    <p>@Model.IsDeleted</p>
+    </div>
+    <div class="col-md-4">
+    <h4>Kategori Adı:</h4>
+    <p>@Model.Category.CategoryName</p>
+    <h4>Yazar Adı:</h4>
+    <p>@Model.Author.AuthorName</p>
+    <h4>Yayımcı Adı:</h4>
+    <p>@Model.Publisher.PublisherName</p>
+    </div>
+</div>
+
+<a asp-action="Index">Kategori listesine dön.</a>
