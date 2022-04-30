@@ -24,7 +24,7 @@
                 <td>@item.AuthorId</td>
                 <td>@item.AuthorName</td>
                 <td>@item.AuthorSurname</td>
-                <td>@item.AuthorDateOfBirth</td>
+                <td>@item.AuthorDateOfBirth.ToShortDateString()</td>
                 <td>
                 <td>
                     <a class="btn btn-sm btn-info" asp-action="Details" asp-route-id="@item.AuthorId">Detaylar</a>

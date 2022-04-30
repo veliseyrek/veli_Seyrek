@@ -88,7 +88,6 @@ function init(settings){
 
     },settings.duration)
 
-
 }
 
 //ok tuşlarına basma işlemi
