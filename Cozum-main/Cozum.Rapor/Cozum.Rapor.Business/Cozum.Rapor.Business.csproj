@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.17" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Cozum.Rapor.Data\Cozum.Rapor.Data.csproj" />
+    <ProjectReference Include="..\Cozum.Rapor.Entities\Cozum.Rapor.Entities.csproj" />
+  </ItemGroup>
+
+</Project>

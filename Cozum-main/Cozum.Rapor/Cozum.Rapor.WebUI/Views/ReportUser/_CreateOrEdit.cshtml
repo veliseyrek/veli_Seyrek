@@ -1,0 +1,33 @@
+﻿@model RprUser
+
+<div class="form-floating mb-7">
+        <input type="text" class="form-control form-control-solid" asp-for="Username" placeholder="Kullanıcı Adı" />
+        <label for="floatingInput1">Kullanıcı Adı</label>
+    </div>
+     <div class="form-floating mb-7">
+        <input type="text" class="form-control form-control-solid" asp-for="Password" placeholder="Şifre"  />
+        <label for="floatingInput1">Şifre</label>
+    </div>
+
+    <div class="form-floating mb-7">
+        <input type="text" class="form-control form-control-solid" asp-for="Name" placeholder="Adı"/>
+        <label for="floatingInput1">Adı</label>
+    </div>
+
+    <div class="form-floating mb-7">
+        <input type="text" class="form-control form-control-solid" asp-for="Lastname" placeholder="Soyadı"/>
+        <label for="floatingInput1">Soyadı</label>
+    </div>
+
+    <div class="form-floating mb-7">
+        <input type="email" class="form-control form-control-solid" asp-for="EMail" placeholder="Email Adresi"/>
+        <label for="floatingInput1">Email Adresi</label>
+    </div>
+
+    <div class="form-floating mb-7">
+        <input type="text" class="form-control form-control-solid" asp-for="Departmant" placeholder="Departman"/>
+        <label for="floatingInput1">Departman</label>
+    </div>
+   
+    <a href="/ReportUser"><button type="button" class="btn btn-white">İptal</button> </a> 
+    <button type="submit" class="btn btn-primary">Kaydet</button>  

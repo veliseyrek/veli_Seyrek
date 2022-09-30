@@ -1,0 +1,61 @@
+﻿@model List<Cozum.Rapor.WebUI.Models.PersonelModel>
+
+
+
+
+
+
+
+
+
+<table id="kt_datatable_vertical_scroll" class="table table-striped table-row-bordered gy-5 gs-7">
+    <thead>
+        <tr class="fw-semibold fs-6 text-gray-800">
+            <th>#</th>
+            <th>Adı Soyadı</th>
+            <th>Numara</th>
+            <th>Tür</th>
+            <th>Varsayılan</th>
+            <th>Şube</th>
+            <th colspan="2" class="text-center">Actions</th>   
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.PersonelNo</td>
+                <td>@item.AdiSoyadi</td>
+                <td>@item.Num</td>
+                <td>@item.Tur</td>
+                <td>@item.Varsayilan</td>
+                <td>@item.Sube</td>
+                <td colspan="2"><a href="#">Düzenle</a><a href="#">Sil</a></td>
+             
+
+
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr class="fw-semibold fs-6 text-gray-800">
+            <th>#</th>
+            <th>Adı Soyadı</th>
+            <th>Numara</th>
+            <th>Tür</th>
+            <th>Varsayılan</th>
+            <th>Şube</th>
+            <th colspan="2" class="text-center">Actions</th>
+        </tr>
+    </tfoot>
+</table>
+
+
+<script>
+    $("#kt_datatable_vertical_scroll").DataTable({
+        "scrollY": "500px",
+        "scrollCollapse": true,
+        "paging": false,
+        "dom": "<'table-responsive'tr>"
+    });
+</script>

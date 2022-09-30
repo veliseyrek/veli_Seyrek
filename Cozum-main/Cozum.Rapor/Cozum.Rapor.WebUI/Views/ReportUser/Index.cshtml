@@ -1,0 +1,114 @@
+﻿@model List<RprUser>
+
+
+<link href="~/Metronic/html/demo1/dist/assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
+<script src="~/Metronic/html/demo1/dist/assets/plugins/custom/datatables/datatables.bundle.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="~/Metronic/html/demo1/dist/assets/plugins/custom/formrepeater/formrepeater.bundle.js"></script>
+
+<br />
+<a href="/ReportUser/Create"><button class="btn btn-success">Yeni Kayıt</button></a>
+
+<table id="kt_datatable_dom_positioning" class="table table-striped table-row-bordered gy-5 gs-7 border rounded">
+    <thead>
+        <tr class="fw-bold fs-6 text-gray-800 px-7">
+            <th>Kullanıcı Adı</th>
+            <th>Adı</th>
+            <th>Password</th>
+            <th>Soyadı</th>
+            <th>Email Adresi</th>
+            <th>Departman</th>
+            <th>Eylemler</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+
+            <tr class="odd">
+
+                <td>@item.Username</td>
+                <td>@item.Name</td>
+                <td>@item.Password</td>
+                <td>@item.Lastname</td>
+                <td>@item.EMail</td>
+                <td>@item.Departmant</td>
+
+                <td class="text-center d-flex">
+                    <a href="/ReportUser/Edit/@item.Id" class="btn btn-primary me-2">Düzenle</a>
+                    <form asp-controller="ReportUser" asp-action="Delete" method="post">
+                        <input name="Id" value="@item.Id" type="hidden">
+                        <button type="button" class="btn btn-xs btn-danger" data-bs-toggle="modal" data-bs-target="#kt_modal_1">
+                            Sil
+                        </button>
+                        <div class="modal fade" tabindex="-1" id="kt_modal_1">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+
+
+                                    <div class="modal-body">
+                                        <p>Silmek istediğinizden emin misiniz?</p>
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">Hayır</button>
+                                        <button type="submit" class="btn btn-primary">Evet</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
+<!--begin::Repeater-->
+<!--end::Repeater-->
+
+
+<script type="text/javascript">
+    $("#kt_datatable_dom_positioning").DataTable({
+        "language": {
+            "lengthMenu": "Show _MENU_",
+        },
+        "dom":
+            "<'row'" +
+            "<'col-sm-6 d-flex align-items-center justify-conten-start'l>" +
+            "<'col-sm-6 d-flex align-items-center justify-content-end'f>" +
+            ">" +
+
+            "<'table-responsive'tr>" +
+
+            "<'row'" +
+            "<'col-sm-12 col-md-5 d-flex align-items-center justify-content-center justify-content-md-start'i>" +
+            "<'col-sm-12 col-md-7 d-flex align-items-center justify-content-center justify-content-md-end'p>" +
+            ">"
+    });
+
+    $('#kt_docs_repeater_basic').repeater({
+        initEmpty: false,
+
+        defaultValues: {
+            'text-input': 'foo'
+        },
+
+        show: function() {
+            $(this).slideDown();
+        },
+
+        hide: function(deleteElement) {
+            $(this).slideUp(deleteElement);
+        }
+    });
+</script>
+
+
+
+
